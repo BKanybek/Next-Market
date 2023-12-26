@@ -1,5 +1,56 @@
-.list{
+.list {
     display: flex;
     width: 100%;
     margin-top: 20px;
+    gap: 10px;
+
+    @media all and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .categoryBtn {
+        display: none;
+        width: 50%;
+
+        @media all and (max-width: 768px) {
+            display: block;
+            width: 50%;
+            padding: 5px 10px;
+            background-color: #0e90fa;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: rgb(16, 126, 160);
+            }
+        }
+
+
+    }
+
+
+}
+
+.selectCategory {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+
+    span {
+        font-size: 18px;
+
+        &::first-letter {
+            text-transform: uppercase;
+        }
+    }
 }
